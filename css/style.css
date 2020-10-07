@@ -210,22 +210,34 @@ html, body {
   color: #ffffff;
 }
 
-.header__link:hover:after {
+.header__link:after {
   content: '';
+  visibility: hidden;
   position: absolute;
   left: 0;
   width: 100%;
   height: 1.5px;
   bottom: -1px;
   background-color: #fcef48;
+  -webkit-animation-name: unline;
+  animation-name: unline;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.header__link:hover:after {
+  visibility: visible;
   -webkit-animation-name: line;
   animation-name: line;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes line {
@@ -243,6 +255,24 @@ html, body {
   }
   100% {
     width: 100%;
+  }
+}
+
+@-webkit-keyframes unline {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes unline {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
   }
 }
 
