@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 @font-face {
-  font-family: 'HelveticaNeueCyr';
+  font-family: "HelveticaNeueCyr";
   src: url("../fonts/helveticaneuecyr-light.eot");
   src: local("☺"), url("../fonts/helveticaneuecyr-light.woff") format("woff"), url("../fonts/helveticaneuecyr-light.ttf") format("truetype"), url("../fonts/helveticaneuecyr-light.svg") format("svg");
   font-weight: 300;
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
+  font-family: "HelveticaNeueCyr";
   src: url("../fonts/helveticaneuecyr-roman.eot");
   src: local("☺"), url("../fonts/helveticaneuecyr-roman.woff") format("woff"), url("../fonts/helveticaneuecyr-roman.ttf") format("truetype"), url("../fonts/helveticaneuecyr-roman.svg") format("svg");
   font-weight: normal;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
+  font-family: "HelveticaNeueCyr";
   src: url("../fonts/helveticaneuecyr-bold.eot");
   src: local("☺"), url("../fonts/helveticaneuecyr-bold.woff") format("woff"), url("../fonts/helveticaneuecyr-bold.ttf") format("truetype"), url("../fonts/helveticaneuecyr-bold.svg") format("svg");
   font-weight: 700;
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
+  font-family: "HelveticaNeueCyr";
   src: url("../fonts/HelveticaNeueCyr-Black.eot");
   src: local("☺"), url("../fonts/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Black.svg") format("svg");
   font-weight: 900;
@@ -129,9 +129,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'HelveticaNeueCyr';
+  font-family: "HelveticaNeueCyr";
 }
 
 .container {
@@ -155,6 +156,13 @@ html, body {
   opacity: 0;
 }
 
+.header_no {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
 .header._active {
   opacity: 1;
   -webkit-transform: translate(0, 0);
@@ -163,7 +171,7 @@ html, body {
 }
 
 .header:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -225,7 +233,7 @@ html, body {
 }
 
 .header__link:after {
-  content: '';
+  content: "";
   visibility: hidden;
   position: absolute;
   left: 0;
@@ -339,7 +347,7 @@ html, body {
     order: 3;
   }
   .header__burger:before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ffff68;
     width: 100%;
@@ -351,7 +359,7 @@ html, body {
     transition: all 0.3s ease 0s;
   }
   .header__burger:after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ffff68;
     width: 100%;
@@ -363,7 +371,7 @@ html, body {
     transition: all 0.3s ease 0s;
   }
   .header__burger span {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ffff68;
     width: 100%;
@@ -402,14 +410,14 @@ html, body {
   }
   .header__menu {
     position: fixed;
-    top: -100%;
-    left: 0;
+    top: 0;
+    left: -100%;
     padding: 70px 0 0 0;
     text-align: center;
     display: block;
     overflow: auto;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #000;
     opacity: 0.94;
     -webkit-transition: all 0.5s ease 0s;
@@ -424,7 +432,7 @@ html, body {
     display: none;
   }
   .header__menu.active {
-    top: 0;
+    left: 0;
   }
   .header__link {
     font-size: 30px;
@@ -659,7 +667,7 @@ html, body {
 }
 
 .info__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: calc(22px + 14 * ((100vw - 320px) / 1046));
   line-height: 48px;
   font-weight: 900;
@@ -1338,6 +1346,12 @@ html, body {
   transition: all 1.3s ease 0s;
 }
 
+@media (max-width: 630px) {
+  .categories__slide {
+    opacity: 1;
+  }
+}
+
 .categories__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1826,7 +1840,7 @@ html, body {
 }
 
 #tab-1:checked ~ .tab__label_1:after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
@@ -1852,7 +1866,7 @@ html, body {
 }
 
 #tab-2:checked ~ .tab__label_2:after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
@@ -1878,7 +1892,7 @@ html, body {
 }
 
 #tab-3:checked ~ .tab__label_3:after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
@@ -2766,7 +2780,7 @@ html, body {
 }
 
 .breadcrumbs__link:after {
-  content: '';
+  content: "";
   margin: 0 0 0 3px;
   display: inline-block;
   height: 13px;
